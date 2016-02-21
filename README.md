@@ -18,7 +18,7 @@ error FS0192 : internal error : impossible [\src\ImpossibleCompilerError\Impossi
 
 It seems to be a strange interaction between the FSharp.Data CSV type provider and the compiler in the file [`MyModule.fs`](src/ImpossibleCompilerError/MyModule.fs).
 
-The error fails to occur if the "," is changed to something else ("|" say), implying that it is something to do with parsing the sample text.
+The error fails to occur if the CsvProvider separator "," is changed to something else ("|" say), implying that it is something to do with parsing the sample text.
 
 ```
 type PropertyOperatingStatementTP = FSharp.Data.CsvProvider<sample,Separators=",",HasHeaders=true >
