@@ -1,0 +1,13 @@
+source https://nuget.org/api/v2
+framework: net452
+redirects: on
+
+nuget FAKE
+
+
+// nuget FSharp.Data                  // latest version 
+nuget FSharp.Data ~> 2.2.5      // specific version
+// nuget FSharp.Data prerelease    // latest
+
+
+

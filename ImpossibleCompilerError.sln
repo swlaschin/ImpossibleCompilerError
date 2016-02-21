@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ImpossibleCompilerError", "src\ImpossibleCompilerError\ImpossibleCompilerError.fsproj", "{0568E007-8C8F-4483-BD60-66B4A5385EE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{77D032C0-F845-43C0-BB38-4B2838C10724}"
+	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
+		build.fsx = build.fsx
+		build.sh = build.sh
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0568E007-8C8F-4483-BD60-66B4A5385EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0568E007-8C8F-4483-BD60-66B4A5385EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0568E007-8C8F-4483-BD60-66B4A5385EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0568E007-8C8F-4483-BD60-66B4A5385EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
