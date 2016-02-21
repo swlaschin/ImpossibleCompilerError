@@ -1,9 +1,18 @@
 ## Compiler error
 
-This project fails to compile with an "impossible" compiler error.
+This project fails to compile with an "impossible" compiler error somewhere in the `XmlDocWriter`
 
 ```
 error FS0192 : internal error : impossible [\src\ImpossibleCompilerError\ImpossibleCompilerError.fsproj]
+
+ Unhandled Exception: System.Exception: impossible
+            at Microsoft.FSharp.Compiler.Tastops.typeEnc(TcGlobals g, FSharpList`1 gtpsType, FSharpList`1 gtpsMethod, TType ty)
+            at Microsoft.FSharp.Primitives.Basics.List.map[T,TResult](FSharpFunc`2 mapping, FSharpList`1 x)
+            at Microsoft.FSharp.Compiler.Tastops.XmlDocArgsEnc(TcGlobals g, FSharpList`1 gtpsType, FSharpList`1 gtpsMethod, FSharpList`1 argTs)
+            at Microsoft.FSharp.Compiler.Tastops.XmlDocSigOfVal(TcGlobals g, String path, Val v)
+            at Microsoft.FSharp.Compiler.Driver.XmlDocWriter.doValSig@512(TcGlobals tcGlobals, String ptext, Val v)
+            at Microsoft.FSharp.Compiler.Driver.XmlDocWriter.doValSig@512-1.Invoke(String ptext, Val v)
+            at Microsoft.FSharp.Primitives.Basics.List.iter[T](FSharpFunc`2 f, FSharpList`1 x)
 ```
 
 
@@ -23,4 +32,12 @@ let toUpdateCommand (source:PropertyOperatingStatementTP.Row)  =
     ()
 ```
 
-Possibly, the type provider is generating code that puts the compiler into a bad state and the doc string tips it over the edge? 
+Possibly, the type provider is generating code that puts the compiler into a bad state and the doc string tips the `XmlDocWriter` logic over the edge? 
+
+### Testing environment and version info
+
+* Operating System: Windows 10
+* .NET framework: net452
+* F# compiler: v4.0 (Visual Studio 2015)
+* Fsharp.Core: 4.4.0.0
+* FSharp.Data (2.2.5) (also fails with 2.3.0-beta2 )
