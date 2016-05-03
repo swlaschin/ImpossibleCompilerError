@@ -1,0 +1,9 @@
+I opened up the source and did some debugging.
+
+It fails in "let rec typeEnc g (gtpsType,gtpsMethod) ty" in file "TastOps.fs"
+If fails because the {ty :TType} gets massivly broken to the point where the debugger will crash trying to inspect it.
+
+There are a few functions {stripTyEqns,stripTyEqnsAndMeasureEqns} that modify the {ty} before the failure catch inside the function {typeEnc}.
+But also likly the {ty} gets messed up befort {typeEnc} is called.
+
+Maybe move this information to the main discription.
